@@ -1,14 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-
-import { BrowserRouter } from "react-router-dom";
-
-<BrowserRouter basename="/portfolio-react">
-  <App />
-</BrowserRouter>
-
-
 function App() {
   const [menuActive, setMenuActive] = useState(false);
   const [headerHidden, setHeaderHidden] = useState(false);
@@ -22,11 +14,11 @@ function App() {
     link.crossOrigin = 'anonymous';
     document.head.appendChild(link);
 
-    // Add favicon
+    // Add favicon - use relative path for GitHub Pages
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
     favicon.type = 'image/png';
-    favicon.href = '/logo/favicon1.png';
+    favicon.href = './logo/favicon1.png';
     document.head.appendChild(favicon);
 
     // Cleanup function to remove elements if component unmounts
@@ -168,7 +160,7 @@ function App() {
     },
     {
       title: "AnimeWitcher",
-      description: "A specialized anime streaming platform focused on providing high-quality content with an intuitive user interface. Features include a curated anime library, responsive design, and seamless video playback experience.",
+      description: "A specialized anime streaming platform focused on providing high-quality content with an intuitive user interface. Features include a curated anime library, responsive design, and seamless video playbook experience.",
       techStack: ["HTML5", "CSS3", "JavaScript", "Node.js", "MongoDB"],
       links: {
         live: "https://animewitcher.cyou",
@@ -208,7 +200,11 @@ function App() {
     <div className="App">
       <header className={`header ${headerHidden ? 'hidden' : ''}`}>
         <div className="logo">
-          <img src="/logo/Thlaes.png" alt="Thales Logo" />
+          <img src="./logo/Thlaes.png" alt="Thales Logo" onError={(e) => {
+            e.target.style.display = 'none';
+            e.target.nextSibling.style.display = 'block';
+          }} />
+          <span style={{display: 'none'}}>Thales</span>
         </div>
         <nav className={`menu-container ${menuActive ? 'active' : ''}`}>
           <ul className="menu">
@@ -406,7 +402,11 @@ function App() {
       <footer className="footer">
         <div className="footer-content">
           <div className="logo-footer" onClick={scrollToTop}>
-            <img src="/logo/Thlaes.png" alt="Thales Logo" />
+            <img src="./logo/Thlaes.png" alt="Thales Logo" onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'block';
+            }} />
+            <span style={{display: 'none'}}>Thales</span>
           </div>
           
           <div className="credit-pos">
