@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+
+import { BrowserRouter } from "react-router-dom";
+
+<BrowserRouter basename="/portfolio-react">
+  <App />
+</BrowserRouter>
+
+
 function App() {
   const [menuActive, setMenuActive] = useState(false);
   const [headerHidden, setHeaderHidden] = useState(false);
