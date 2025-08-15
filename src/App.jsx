@@ -133,38 +133,52 @@ function App() {
 
   const projects = [
     {
-      title: "SoloLevelingSeason",
-      description: "A dedicated platform for Solo Leveling fans featuring the latest updates, episode discussions, and community engagement. Built with modern web technologies for optimal performance and user experience.",
-      techStack: ["React", "Node.js", "Express", "MongoDB", "AWS"],
+      title: "VisionUI",
+      description: "A modern CSS framework and UI component library built with pure CSS. Features responsive design, customizable components, and modern design principles for building beautiful user interfaces.",
+      techStack: ["CSS", "HTML", "JavaScript", "Responsive Design"],
       links: {
-        live: "https://sololevelingseason.com",
-        github: "https://github.com/Thalesmar/sololevelingseason"
+        github: "https://github.com/Thalesmar/VisionUI"
       }
     },
     {
-      title: "RistoAnime",
-      description: "A modern anime streaming platform with advanced features including a vast library of anime content, user profiles, watchlist management, and community integration. Optimized for seamless streaming experience.",
-      techStack: ["React", "Node.js", "MongoDB", "AWS", "Redis"],
+      title: "Workout Tracker App",
+      description: "A comprehensive fitness tracking application that helps users monitor their workouts, track progress, and maintain fitness goals. Features user authentication and data visualization.",
+      techStack: ["CSS", "JavaScript", "HTML", "Local Storage"],
       links: {
-        live: "https://ristoanime.com",
-        github: "https://github.com/Thalesmar/ristoanime"
+        github: "https://github.com/Thalesmar/Workout-Tracker-App"
       }
     },
     {
-      title: "Portfolio Website",
-      description: "A modern and interactive portfolio website showcasing my work and skills. Features smooth animations, responsive design, and optimized performance.",
-      techStack: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+      title: "JavaScript Fun Practice",
+      description: "A collection of functional programming exercises and challenges in JavaScript. Forked from Zero to Mastery, featuring practical exercises to improve JavaScript skills and problem-solving abilities.",
+      techStack: ["JavaScript", "Functional Programming", "ES6+", "Problem Solving"],
       links: {
+        github: "https://github.com/Thalesmar/JS_Fun_Practice"
+      }
+    },
+    {
+      title: "JavaScript Color Picker",
+      description: "An interactive color picker application built with vanilla JavaScript. Features real-time color selection, hex code generation, and a user-friendly interface for designers and developers.",
+      techStack: ["JavaScript", "HTML", "CSS", "DOM Manipulation"],
+      links: {
+        github: "https://github.com/Thalesmar/JavaScript-Color-Picker"
+      }
+    },
+    {
+      title: "Gradient Background Generator",
+      description: "A dynamic gradient background generator that creates beautiful color combinations. Users can customize colors, angles, and export CSS code for their projects.",
+      techStack: ["JavaScript", "CSS", "HTML", "Color Theory"],
+      links: {
+        github: "https://github.com/Thalesmar/Gradient-Background"
+      }
+    },
+    {
+      title: "Personal Portfolio",
+      description: "A modern, responsive portfolio website showcasing my work and skills. Features smooth animations, interactive elements, and optimized performance for professional presentation.",
+      techStack: ["React", "CSS", "JavaScript", "Responsive Design"],
+      links: {
+        live: "https://Thalesmar.github.io/portfolio",
         github: "https://github.com/Thalesmar/portfolio"
-      }
-    },
-    {
-      title: "AnimeWitcher",
-      description: "A specialized anime streaming platform focused on providing high-quality content with an intuitive user interface. Features include a curated anime library, responsive design, and seamless video playbook experience.",
-      techStack: ["HTML5", "CSS3", "JavaScript", "Node.js", "MongoDB"],
-      links: {
-        live: "https://animewitcher.cyou",
-        github: "https://github.com/Thalesmar/animewitcher"
       }
     }
   ];
@@ -174,24 +188,24 @@ function App() {
       category: "Languages",
       items: [
         { name: "JavaScript", level: "90%" },
-        { name: "CSS", level: "85%" },
-        { name: "HTML", level: "88%" }
+        { name: "CSS", level: "88%" },
+        { name: "HTML", level: "85%" }
       ]
     },
     {
-      category: "Frameworks",
+      category: "Frameworks & Libraries",
       items: [
-        { name: "React", level: "92%" },
-        { name: "Node.js", level: "88%" },
-        { name: "Tailwind CSS", level: "85%" }
+        { name: "React", level: "85%" },
+        { name: "Node.js", level: "80%" },
+        { name: "Express.js", level: "75%" }
       ]
     },
     {
-      category: "Tools",
+      category: "Tools & Technologies",
       items: [
-        { name: "Git", level: "95%" },
-        { name: "SQL", level: "87%" },
-        { name: "AWS", level: "83%" }
+        { name: "Git & GitHub", level: "90%" },
+        { name: "Responsive Design", level: "88%" },
+        { name: "Local Storage", level: "85%" }
       ]
     }
   ];
