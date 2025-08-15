@@ -185,27 +185,27 @@ function App() {
 
   const skills = [
     {
-      category: "Languages",
+      category: "Programming Languages",
       items: [
-        { name: "JavaScript", level: "90%" },
-        { name: "CSS", level: "88%" },
-        { name: "HTML", level: "85%" }
+        { name: "JavaScript/TypeScript", level: "92%" },
+        { name: "Python", level: "85%" },
+        { name: "HTML/CSS", level: "90%" }
       ]
     },
     {
-      category: "Frameworks & Libraries",
+      category: "Frontend Technologies",
       items: [
-        { name: "React", level: "85%" },
-        { name: "Node.js", level: "80%" },
-        { name: "Express.js", level: "75%" }
+        { name: "React.js", level: "90%" },
+        { name: "Next.js", level: "80%" },
+        { name: "Tailwind CSS", level: "85%" }
       ]
     },
     {
-      category: "Tools & Technologies",
+      category: "Backend & DevOps",
       items: [
-        { name: "Git & GitHub", level: "90%" },
-        { name: "Responsive Design", level: "88%" },
-        { name: "Local Storage", level: "85%" }
+        { name: "Node.js/Express", level: "88%" },
+        { name: "Docker/Kubernetes", level: "80%" },
+        { name: "AWS/Cloud Platforms", level: "82%" }
       ]
     }
   ];
@@ -242,7 +242,7 @@ function App() {
         </div>
         <p className="name-intro">I'm <span className="name-highlight">Yassine Harroute</span></p>
         <p className="intro">
-          I'm a <span className="hover-underline">fullstack developer</span> with <span className="hover-underline">2+ years of experience</span> building <span className="hover-underline">scalable web applications</span> and <span className="hover-underline">API integrations</span>.
+          I'm a <span className="hover-underline">Software Engineer</span> with <span className="hover-underline">3+ years of experience</span> building <span className="hover-underline">scalable web applications</span> and <span className="hover-underline">modern software solutions</span>.
         </p>
       </div>
 
@@ -254,11 +254,11 @@ function App() {
       <section id="about" className="about-section section">
         <h2 className="section-title">.about<span className="h2">("me")</span></h2>
         <div className="about-text">
-          <p>Hi there! I'm Yassine Harroute, a fullstack developer based in Kenitra, Morocco. I specialize in building scalable web applications using React.js, Node.js, and modern databases. With over 2 years of experience, I've developed multiple responsive web applications with a focus on API integration and secure authentication systems.</p>
+          <p>I'm a passionate Software Engineer based in Morocco with over 3 years of experience in developing scalable web applications and modern software solutions. I specialize in full-stack development using cutting-edge technologies and best practices to deliver high-quality, maintainable code.</p>
           
-          <p>My technical expertise includes frontend technologies like React.js and Vue.js, backend development with Node.js and Express.js, and database management using PostgreSQL, MySQL, and MongoDB. I'm proficient with modern development tools including Git, Docker, and AWS, and I have experience implementing secure JWT authentication and optimizing database performance.</p>
+          <p>My expertise encompasses frontend technologies like React.js and TypeScript, backend development with Node.js and Express.js, and database management using both SQL (PostgreSQL, MySQL) and NoSQL (MongoDB) solutions. I'm proficient with modern development tools including Git, Docker, and cloud platforms like AWS, and I have extensive experience implementing CI/CD pipelines, automated testing, and performance optimization strategies.</p>
           
-          <p>Currently, I am focused on developing innovative web solutions and expanding my skill set in cloud technologies and DevSecOps practices. I am passionate about building efficient, scalable applications and continuously improving my craft as a developer.</p>
+          <p>Currently, I'm actively seeking new opportunities as a Software Engineer, preferably in remote or hybrid roles. I thrive in dynamic environments where I can contribute to innovative projects, mentor junior developers, and continuously expand my technical expertise. I'm passionate about clean code architecture, software design patterns, and staying current with emerging technologies in the ever-evolving software development landscape.</p>
         </div>
       </section>
 
@@ -296,46 +296,118 @@ function App() {
       <section id="resume" className="resume-section section">
         <h1 className="main-resume-title">.resume<span className="title-bracket">("my journey")</span></h1>
         
+        <div className="timeline-container">
+          <div className="timeline">
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <div className="timeline-date">2024 - Present</div>
+                <h3>Software Engineer</h3>
+                <div className="timeline-company">Freelance Developer</div>
+                <p>Currently working as a freelance software engineer, developing custom web solutions and applications for various clients. Specializing in modern web technologies, scalable architecture, and cloud deployment solutions.</p>
+                <div className="timeline-tech">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                  <span>Express</span>
+                  <span>TypeScript</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <div className="timeline-date">2022 - 2024</div>
+                <h3>Full Stack Developer</h3>
+                <div className="timeline-company">Web Development Agency</div>
+                <p>Led the development of multiple full-stack web applications, focusing on scalable architecture and modern development practices. Implemented CI/CD pipelines and optimized application performance for enterprise clients.</p>
+                <div className="timeline-tech">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>PostgreSQL</span>
+                  <span>Docker</span>
+                  <span>AWS</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <div className="timeline-date">2021 - 2022</div>
+                <h3>Frontend Developer</h3>
+                <div className="timeline-company">Startup Company</div>
+                <p>Developed responsive user interfaces and implemented modern frontend architectures. Collaborated with design teams to create intuitive user experiences and optimized web performance.</p>
+                <div className="timeline-tech">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>CSS3</span>
+                  <span>Webpack</span>
+                  <span>Git</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <div className="timeline-date">2020 - 2021</div>
+                <h3>Web Developer Intern</h3>
+                <div className="timeline-company">Digital Agency</div>
+                <p>Started my journey in web development, learning modern frameworks and best practices. Contributed to various client projects and gained hands-on experience with real-world applications.</p>
+                <div className="timeline-tech">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                  <span>PHP</span>
+                  <span>MySQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="content-container">
           <div className="card-1">
             <div className="experience-content">
               <div className="job-header">
-                <h3>Full Stack Web Developer</h3>
-                <div className="date">2021 - 2023</div>
+                <h3>Software Engineer</h3>
+                <div className="date">2024 - Present</div>
               </div>
               
               <div className="company">
-                Web Development Company
+                Freelance Developer
                 <a className="button" href="https://github.com/Thalesmar">
                   <i className="fas fa-external-link-alt"></i>
                 </a>
               </div>
               
               <p style={{textAlign: 'left'}}>
-                Led the development of multiple web applications using modern technologies. Focused on creating responsive, user-centric designs and implementing complex functionalities using modern frameworks.
+                Currently working as a freelance software engineer, developing custom web solutions and applications for various clients. Specializing in modern web technologies, scalable architecture, and cloud deployment solutions.
               </p>
               
               <div className="project">
                 <p style={{textAlign: 'left'}}>- Developed and maintained multiple full-stack applications using React, Node.js, and MongoDB</p>
-                <span className="tags">React Node.js MongoDB Express</span>
+                <span className="tags">React Node.js MongoDB Express TypeScript</span>
               </div>
               
               <div className="project">
-                <p style={{textAlign: 'left'}}>- Implemented responsive designs and optimized application performance</p>
-                <span className="tags">HTML5 CSS3 JavaScript</span>
+                <p style={{textAlign: 'left'}}>- Implemented responsive designs and optimized application performance for better user experience</p>
+                <span className="tags">HTML5 CSS3 JavaScript Responsive Design</span>
               </div>
               
               <div className="project">
-                <p>- Created and integrated RESTful APIs for seamless data management</p>
-                <span className="tags">Node.js Express MongoDB</span>
+                <p>- Created and integrated RESTful APIs for seamless data management and third-party integrations</p>
+                <span className="tags">Node.js Express MongoDB API Development</span>
               </div>
               
               <div className="skillscards">
-                <span>JavaScript</span>
                 <span>React</span>
                 <span>Node.js</span>
                 <span>MongoDB</span>
-                <span>HTML/CSS</span>
+                <span>TypeScript</span>
+                <span>Express</span>
               </div>
             </div>
           </div>
@@ -343,41 +415,41 @@ function App() {
           <div className="card-2">
             <div className="experience-content">
               <div className="job-header">
-                <h3>Freelancer</h3>
-                <div className="date">2024 - 2025</div>
+                <h3>Full Stack Developer</h3>
+                <div className="date">2022 - 2024</div>
               </div>
               <div className="company">
-                Self-Employed
+                Web Development Agency
                 <a className="button" href="https://github.com/Thalesmar">
                   <i className="fas fa-external-link-alt"></i>
                 </a>
               </div>
             
               <p>
-                Working with various clients to develop custom web solutions. Projects include anime streaming platforms, community websites, and portfolio development.
+                Led the development of multiple full-stack web applications, focusing on scalable architecture and modern development practices. Implemented CI/CD pipelines and optimized application performance for enterprise clients.
               </p>
               
               <div className="project">
-                <p>- Developed SoloLevelingSeason and RistoAnime platforms</p>
-                <span className="tags">React Node.js MongoDB AWS</span>
+                <p>- Developed enterprise-level applications with microservices architecture and containerization</p>
+                <span className="tags">React Node.js PostgreSQL Docker AWS</span>
               </div>
             
               <div className="project">
-                <p>- Created custom CMS solutions and e-commerce integrations</p>
-                <span className="tags">React Node.js Express MongoDB</span>
+                <p>- Implemented automated testing strategies and CI/CD pipelines for improved development workflow</p>
+                <span className="tags">Jest Cypress GitHub Actions CI/CD</span>
               </div>
             
               <div className="project">
-                <p>- Implemented responsive designs and modern UI/UX practices</p>
-                <span className="tags">HTML5 CSS3 JavaScript React</span>
+                <p>- Optimized database performance and implemented caching strategies for better scalability</p>
+                <span className="tags">PostgreSQL Redis Performance Optimization</span>
               </div>
               
               <div className="skillscards">
                 <span>React</span>
                 <span>Node.js</span>
-                <span>MongoDB</span>
+                <span>PostgreSQL</span>
+                <span>Docker</span>
                 <span>AWS</span>
-                <span>Express</span>
               </div>
             </div>
           </div>
