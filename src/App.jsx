@@ -225,6 +225,7 @@ function App() {
             <li><a href="#about" className="botona" onClick={(e) => handleNavClick(e, '#about')}>.about()</a></li>
             <li><a href="#resume" className="botona" onClick={(e) => handleNavClick(e, '#resume')}>.resume()</a></li>
             <li><a href="#projects" className="botona" onClick={(e) => handleNavClick(e, '#projects')}>.projects()</a></li>
+            <li><a href="#about" className="botona" onClick={(e) => handleNavClick(e, '#skills-section')}>.skills()</a></li>
             <li><a href="#contact" className="botona" onClick={(e) => handleNavClick(e, '#contact')}>.contact()</a></li>
           </ul>
         </nav>
@@ -456,7 +457,7 @@ function App() {
         </div>
       </section>
 
-      <section className="skills-section section">
+      <section className="skills-section section" id="skills-section">
         <h2 className="section-title">.skills<span className="h2">()</span></h2>
         <div className="skills-container">
           {skills.map((category, index) => (
