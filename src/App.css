@@ -135,7 +135,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  max-width: min(90%, 700px);
+  /* max-width: min(90%, 700px); */
   height: auto;
   min-height: 100vh;
   padding: clamp(4rem, 4vh, 6rem);
@@ -178,7 +178,7 @@ body {
 }
 
 .intro {
-  max-width: 700px;
+  /* max-width: 700px; */
   margin: 0.6rem 0;
   font-size: 1.4rem;
   line-height: 1.8;
