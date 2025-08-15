@@ -156,7 +156,7 @@ body {
 }
 
 .greeting {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: rgb(153, 255, 228);
 }
@@ -178,7 +178,7 @@ body {
 .intro {
   max-width: 700px;
   margin: 0.6rem 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   color: grey;
   text-align: left;
@@ -314,13 +314,32 @@ body {
 }
 
 .about-text p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.9;
-  opacity: 1;
+  opacity: 0.3;
   transition: opacity 0.8s ease-in-out;
   color: #f0f0f0;
   letter-spacing: 0.2px;
   font-weight: 400;
+  transform: translateY(20px);
+  transition: all 1.2s ease-in-out;
+}
+
+.about-text p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-text p:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.about-text p:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.about-text p:nth-child(3) {
+  transition-delay: 0.6s;
 }
 
 .projects-section {
@@ -358,16 +377,16 @@ body {
 
 .project-content h3 {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .project-content p {
   color: #999;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 
@@ -383,7 +402,7 @@ body {
   color: rgb(247, 201, 160);
   padding: 0.25rem 0.75rem;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -487,6 +506,20 @@ body {
   color: white;
 }
 
+.experience-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+}
+
+.experience-content .project p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+
 .job-header {
   display: flex;
   justify-content: space-between;
@@ -497,14 +530,14 @@ body {
 
 .job-header h3 {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .date {
   color: rgb(247, 201, 160);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -541,7 +574,7 @@ body {
   background: rgba(247, 201, 160, 0.1);
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: rgb(247, 201, 160);
   margin: 0.5rem 0;
@@ -560,7 +593,7 @@ body {
   background: rgba(247, 201, 160, 0.1);
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: rgb(247, 201, 160);
 }
@@ -590,7 +623,7 @@ body {
 
 .skill-category h3 {
   color: rgb(247, 201, 160);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }
@@ -608,7 +641,7 @@ body {
 .skill-name {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
@@ -636,7 +669,7 @@ body {
 }
 
 .contact-text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   max-width: min(90%, 50rem);
   margin: 2rem auto;
@@ -654,7 +687,7 @@ body {
 
 .hello-button-style {
   padding: 15px 40px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   background-color: rgb(247, 201, 160);
   color: rgb(30, 30, 30);
@@ -697,7 +730,7 @@ body {
 }
 
 .left-styles {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.25rem;
   font-weight: 500;
   color: white;
