@@ -185,7 +185,7 @@ While this is a personal portfolio, suggestions and feedback are welcome! Feel f
 - **Email**: harrouteyassine573@gmail.com
 - **GitHub**: [@Thalesmar](https://github.com/Thalesmar)
 - **LinkedIn**: [Yassine Harroute](https://www.linkedin.com/in/yassine-harroute-32323a355/)
-- **Portfolio**: [https://Thalesmar.github.io/portfolio](https://Thalesmar.github.io/portfolio)
+- **Portfolio**: [(https://thales-2y8.pages.dev/)]([(https://thales-2y8.pages.dev/)])
 
 ## 🙏 Acknowledgments
 
