@@ -35,7 +35,8 @@ A modern, responsive portfolio website showcasing my work as a Software Engineer
 ## 📱 Screenshots
 
 ### Desktop View
-![Desktop Portfolio](https://via.placeholder.com/800x500/1e1e1e/ffffff?text=Portfolio+Desktop+View)
+![Desktop Portfolio](https://raw.githubusercontent.com/YourUser/YourRepo/main/assets/preview.gif)
+
 
 ### Mobile View
 ![Mobile Portfolio](https://via.placeholder.com/400x600/1e1e1e/ffffff?text=Portfolio+Mobile+View)
