@@ -30,7 +30,8 @@ A modern, responsive portfolio website showcasing my work as a Software Engineer
 
 ## 🚀 Live Demo
 
-**🌐 Portfolio Website**: [https://Thalesmar.github.io/portfolio](https://Thalesmar.github.io/portfolio)
+**🌐 Portfolio Website**: [https://thales-2y8.pages.dev](https://thales-2y8.pages.dev/)
+
 
 ## 📱 Screenshots
 
