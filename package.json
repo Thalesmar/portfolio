@@ -1,9 +1,20 @@
 {
   "name": "portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "A modern, responsive portfolio website showcasing my work as a Software Engineer",
+  "keywords": ["portfolio", "react", "software-engineer", "web-development", "frontend", "responsive"],
+  "author": "Yassine Harroute",
+  "license": "MIT",
   "homepage": "https://Thalesmar.github.io/portfolio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thalesmar/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Thalesmar/portfolio/issues"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
