@@ -218,7 +218,7 @@ function App() {
             e.target.style.display = 'none';
             e.target.nextSibling.style.display = 'block';
           }} />
-          <span style={{display: 'none'}}>Thales</span>
+          <span style={{display: 'none'}} className='name-style'>Thales</span>
         </div>
         <nav className={`menu-container ${menuActive ? 'active' : ''}`}>
           <ul className="menu">
@@ -492,7 +492,7 @@ function App() {
               e.target.style.display = 'none';
               e.target.nextSibling.style.display = 'block';
             }} />
-            <span style={{display: 'none'}}>Thales</span>
+            <span style={{display: 'none'}} className='name-style'>Thales</span>
           </div>
           
           <div className="credit-pos">

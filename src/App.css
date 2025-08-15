@@ -851,6 +851,12 @@ body {
   margin-bottom: 2rem;
 }
 
+.privacy span:last-child {
+  color: rgb(153, 255, 228);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .line-middle {
   color: white;
   opacity: 0.7;
@@ -1196,4 +1202,8 @@ html {
   .timeline-container {
     padding: 0 1rem;
   }
+}
+
+.name-style{
+  color: #99ffe4;
 }
