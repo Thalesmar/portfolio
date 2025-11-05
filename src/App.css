@@ -191,6 +191,7 @@ body {
   position: relative;
   display: inline-block;
   font-weight: 500;
+  margin-left: 5px;
 }
 
 .hover-underline::after {
@@ -991,6 +992,10 @@ body {
     padding: 1rem;
   }
 
+  .intro{
+    font-size: 1rem;
+  }
+
   .logo {
     width: 120px;
     font-size: 0.8rem;
@@ -1187,18 +1192,22 @@ html {
   .timeline::before {
     left: 20px;
   }
-  
+
+    .intro{
+    font-size: 1rem;
+  }
+
   .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
     margin-left: 50px;
     margin-right: 0;
     text-align: left;
   }
-  
+
   .timeline-dot {
     left: 20px;
   }
-  
+
   .timeline-container {
     padding: 0 1rem;
   }

@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
+
       // Header hide/show logic
       if (scrollTop > lastScrollTop && scrollTop > 100) {
         setHeaderHidden(true);
@@ -80,7 +80,7 @@ function App() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          
+
           // Animate skill bars
           if (entry.target.classList.contains('skill-progress')) {
             const width = entry.target.getAttribute('data-width');
@@ -109,7 +109,7 @@ function App() {
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
     closeMenu();
-    
+
     if (targetId.startsWith('#')) {
       const target = document.querySelector(targetId);
       if (target) {
@@ -132,44 +132,53 @@ function App() {
   };
 
   const projects = [
-    {
-      title: "VisionUI",
-      description: "A modern CSS framework and UI component library built with pure CSS. Features responsive design, customizable components, and modern design principles for building beautiful user interfaces.",
-      techStack: ["CSS", "HTML", "JavaScript", "Responsive Design"],
+    // {
+    //   title: "VisionUI",
+    //   description: "A modern CSS framework and UI component library built with pure CSS. Features responsive design, customizable components, and modern design principles for building beautiful user interfaces.",
+    //   techStack: ["CSS", "HTML", "JavaScript", "Responsive Design"],
+    //   links: {
+    //     github: "https://github.com/Thalesmar/VisionUI"
+    //   }
+    // },
+    // {
+    //   title: "Workout Tracker App",
+    //   description: "A comprehensive fitness tracking application that helps users monitor their workouts, track progress, and maintain fitness goals. Features user authentication and data visualization.",
+    //   techStack: ["CSS", "JavaScript", "HTML", "Local Storage"],
+    //   links: {
+    //     github: "https://github.com/Thalesmar/Workout-Tracker-App"
+    //   }
+    // },
+    // {
+    //   title: "JavaScript Fun Practice",
+    //   description: "A collection of functional programming exercises and challenges in JavaScript. Forked from Zero to Mastery, featuring practical exercises to improve JavaScript skills and problem-solving abilities.",
+    //   techStack: ["JavaScript", "Functional Programming", "ES6+", "Problem Solving"],
+    //   links: {
+    //     github: "https://github.com/Thalesmar/JS_Fun_Practice"
+    //   }
+    // },
+    // {
+    //   title: "JavaScript Color Picker",
+    //   description: "An interactive color picker application built with vanilla JavaScript. Features real-time color selection, hex code generation, and a user-friendly interface for designers and developers.",
+    //   techStack: ["JavaScript", "HTML", "CSS", "DOM Manipulation"],
+    //   links: {
+    //     github: "https://github.com/Thalesmar/JavaScript-Color-Picker"
+    //   }
+    // },
+    // {
+    //   title: "Gradient Background Generator",
+    //   description: "A dynamic gradient background generator that creates beautiful color combinations. Users can customize colors, angles, and export CSS code for their projects.",
+    //   techStack: ["JavaScript", "CSS", "HTML", "Color Theory"],
+    //   links: {
+    //     github: "https://github.com/Thalesmar/Gradient-Background"
+    //   }
+    // },
+        {
+      title: "SweetBite-Bakery-Fresh-Cakes-Pastries-Sandwiches",
+      description: "A modern, responsive landing page for SweetBite Bakery built with React and Vite. Features a beautiful image slider, product categories, and dark mode support.",
+      techStack: ["React", "CSS", "JavaScript", "Vite", "Responsive Design"],
       links: {
-        github: "https://github.com/Thalesmar/VisionUI"
-      }
-    },
-    {
-      title: "Workout Tracker App",
-      description: "A comprehensive fitness tracking application that helps users monitor their workouts, track progress, and maintain fitness goals. Features user authentication and data visualization.",
-      techStack: ["CSS", "JavaScript", "HTML", "Local Storage"],
-      links: {
-        github: "https://github.com/Thalesmar/Workout-Tracker-App"
-      }
-    },
-    {
-      title: "JavaScript Fun Practice",
-      description: "A collection of functional programming exercises and challenges in JavaScript. Forked from Zero to Mastery, featuring practical exercises to improve JavaScript skills and problem-solving abilities.",
-      techStack: ["JavaScript", "Functional Programming", "ES6+", "Problem Solving"],
-      links: {
-        github: "https://github.com/Thalesmar/JS_Fun_Practice"
-      }
-    },
-    {
-      title: "JavaScript Color Picker",
-      description: "An interactive color picker application built with vanilla JavaScript. Features real-time color selection, hex code generation, and a user-friendly interface for designers and developers.",
-      techStack: ["JavaScript", "HTML", "CSS", "DOM Manipulation"],
-      links: {
-        github: "https://github.com/Thalesmar/JavaScript-Color-Picker"
-      }
-    },
-    {
-      title: "Gradient Background Generator",
-      description: "A dynamic gradient background generator that creates beautiful color combinations. Users can customize colors, angles, and export CSS code for their projects.",
-      techStack: ["JavaScript", "CSS", "HTML", "Color Theory"],
-      links: {
-        github: "https://github.com/Thalesmar/Gradient-Background"
+        live : "https://thalesmar.github.io/SweetBite-Bakery-Fresh-Cakes-Pastries-Sandwiches/",
+        github: "https://github.com/Thalesmar/SweetBite-Bakery-Fresh-Cakes-Pastries-Sandwiches"
       }
     },
     {
@@ -177,7 +186,7 @@ function App() {
       description: "A modern, responsive portfolio website showcasing my work and skills. Features smooth animations, interactive elements, and optimized performance for professional presentation.",
       techStack: ["React", "CSS", "JavaScript", "Responsive Design"],
       links: {
-        live: "https://Thalesmar.github.io/portfolio",
+        live: "https://thales-2y8.pages.dev/",
         github: "https://github.com/Thalesmar/portfolio"
       }
     }
@@ -187,8 +196,9 @@ function App() {
     {
       category: "Programming Languages",
       items: [
-        { name: "JavaScript/TypeScript", level: "92%" },
+        { name: "JavaScript/React", level: "92%" },
         { name: "Python", level: "85%" },
+        {name: "C", level: "50%"},
         { name: "HTML/CSS", level: "90%" }
       ]
     },
@@ -200,14 +210,14 @@ function App() {
         { name: "Tailwind CSS", level: "85%" }
       ]
     },
-    {
-      category: "Backend & DevOps",
-      items: [
-        { name: "Node.js/Express", level: "88%" },
-        { name: "Docker/Kubernetes", level: "80%" },
-        { name: "AWS/Cloud Platforms", level: "82%" }
-      ]
-    }
+    // {
+    //   category: "Backend & DevOps",
+    //   items: [
+    //     { name: "Node.js/Express", level: "88%" },
+    //     { name: "Docker/Kubernetes", level: "80%" },
+    //     { name: "AWS/Cloud Platforms", level: "82%" }
+    //   ]
+    // }
   ];
 
   return (
@@ -243,7 +253,11 @@ function App() {
         </div>
         <p className="name-intro">I'm <span className="name-highlight">Yassine Harroute</span></p>
         <p className="intro">
-          I'm a <span className="hover-underline">Software Engineer</span> with <span className="hover-underline">3+ years of experience</span> building <span className="hover-underline">scalable web applications</span> and <span className="hover-underline">modern software solutions</span>.
+            I'm an aspiring <span className="hover-underline"> Web Developer</span> focused on building
+            <span className="hover-underline"> real-world projects </span> and mastering
+            <span className="hover-underline"> modern web technologies </span>. I specialize in
+            <span className="hover-underline"> responsive interfaces </span> and aim to grow into
+            <span className="hover-underline"> full-stack and DevSecOps development </span>.
         </p>
       </div>
 
@@ -255,11 +269,11 @@ function App() {
       <section id="about" className="about-section section">
         <h2 className="section-title">.about<span className="h2">("me")</span></h2>
         <div className="about-text">
-          <p>I'm a passionate Software Engineer based in Morocco with over 3 years of experience in developing scalable web applications and modern software solutions. I specialize in full-stack development using cutting-edge technologies and best practices to deliver high-quality, maintainable code.</p>
-          
-          <p>My expertise encompasses frontend technologies like React.js and TypeScript, backend development with Node.js and Express.js, and database management using both SQL (PostgreSQL, MySQL) and NoSQL (MongoDB) solutions. I'm proficient with modern development tools including Git, Docker, and cloud platforms like AWS, and I have extensive experience implementing CI/CD pipelines, automated testing, and performance optimization strategies.</p>
-          
-          <p>Currently, I'm actively seeking new opportunities as a Software Engineer, preferably in remote or hybrid roles. I thrive in dynamic environments where I can contribute to innovative projects, mentor junior developers, and continuously expand my technical expertise. I'm passionate about clean code architecture, software design patterns, and staying current with emerging technologies in the ever-evolving software development landscape.</p>
+          <p>I'm a Junior Software Engineer based in Morocco, passionate about web development and modern software solutions. I have experience building responsive and scalable web applications, and I'm continuously expanding my skills in full-stack development using the latest technologies.</p>
+
+            <p>My current focus is on frontend development with React.js and JavaScript, and backend development with Node.js and Express.js. I have experience working with databases like MongoDB and SQL solutions, and I'm learning to work with development tools such as Git, Docker, and cloud platforms. I'm also exploring best practices in CI/CD, automated testing, and performance optimization.</p>
+
+            <p>Currently, I'm looking for opportunities to grow as a Software Engineer, ideally in remote or hybrid roles. I enjoy contributing to innovative projects, learning new technologies, and improving my coding skills while following clean code principles and software design patterns. My goal is to become a well-rounded developer capable of delivering high-quality and maintainable software.</p>
         </div>
       </section>
 
@@ -294,168 +308,74 @@ function App() {
         </div>
       </section>
 
-      <section id="resume" className="resume-section section">
-        <h1 className="main-resume-title">.resume<span className="title-bracket">("my journey")</span></h1>
-        
-        <div className="timeline-container">
-          <div className="timeline">
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <div className="timeline-date">2024 - Present</div>
-                <h3>Software Engineer</h3>
-                <div className="timeline-company">Freelance Developer</div>
-                <p>Currently working as a freelance software engineer, developing custom web solutions and applications for various clients. Specializing in modern web technologies, scalable architecture, and cloud deployment solutions.</p>
-                <div className="timeline-tech">
-                  <span>React</span>
-                  <span>Node.js</span>
-                  <span>MongoDB</span>
-                  <span>Express</span>
-                  <span>TypeScript</span>
-                </div>
-              </div>
-            </div>
+   <section id="resume" className="resume-section section">
+  <h1 className="main-resume-title">.resume<span className="title-bracket">("my journey")</span></h1>
 
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <div className="timeline-date">2022 - 2024</div>
-                <h3>Full Stack Developer</h3>
-                <div className="timeline-company">Web Development Agency</div>
-                <p>Led the development of multiple full-stack web applications, focusing on scalable architecture and modern development practices. Implemented CI/CD pipelines and optimized application performance for enterprise clients.</p>
-                <div className="timeline-tech">
-                  <span>React</span>
-                  <span>Node.js</span>
-                  <span>PostgreSQL</span>
-                  <span>Docker</span>
-                  <span>AWS</span>
-                </div>
-              </div>
-            </div>
+  <div className="timeline-container">
+    <div className="timeline">
 
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <div className="timeline-date">2021 - 2022</div>
-                <h3>Frontend Developer</h3>
-                <div className="timeline-company">Startup Company</div>
-                <p>Developed responsive user interfaces and implemented modern frontend architectures. Collaborated with design teams to create intuitive user experiences and optimized web performance.</p>
-                <div className="timeline-tech">
-                  <span>React</span>
-                  <span>TypeScript</span>
-                  <span>CSS3</span>
-                  <span>Webpack</span>
-                  <span>Git</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <div className="timeline-date">2020 - 2021</div>
-                <h3>Web Developer Intern</h3>
-                <div className="timeline-company">Digital Agency</div>
-                <p>Started my journey in web development, learning modern frameworks and best practices. Contributed to various client projects and gained hands-on experience with real-world applications.</p>
-                <div className="timeline-tech">
-                  <span>HTML5</span>
-                  <span>CSS3</span>
-                  <span>JavaScript</span>
-                  <span>PHP</span>
-                  <span>MySQL</span>
-                </div>
-              </div>
-            </div>
+      <div className="timeline-item">
+        <div className="timeline-dot"></div>
+        <div className="timeline-content">
+          <div className="timeline-date">2022 - Present</div>
+          <h3>Junior Web Developer</h3>
+          <div className="timeline-company">Self-Taught / Portfolio Building</div>
+          <p>
+            Actively learning and building real-world web projects using modern
+            technologies. Focusing on responsive UI, clean code, and improving
+            problem-solving skills while transitioning to backend development.
+          </p>
+          <div className="timeline-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Git & GitHub</span>
           </div>
         </div>
+      </div>
 
-        <div className="content-container">
-          <div className="card-1">
-            <div className="experience-content">
-              <div className="job-header">
-                <h3>Software Engineer</h3>
-                <div className="date">2024 - Present</div>
-              </div>
-              
-              <div className="company">
-                Freelance Developer
-                <a className="button" href="https://github.com/Thalesmar">
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-              
-              <p style={{textAlign: 'left'}}>
-                Currently working as a freelance software engineer, developing custom web solutions and applications for various clients. Specializing in modern web technologies, scalable architecture, and cloud deployment solutions.
-              </p>
-              
-              <div className="project">
-                <p style={{textAlign: 'left'}}>- Developed and maintained multiple full-stack applications using React, Node.js, and MongoDB</p>
-                <span className="tags">React Node.js MongoDB Express TypeScript</span>
-              </div>
-              
-              <div className="project">
-                <p style={{textAlign: 'left'}}>- Implemented responsive designs and optimized application performance for better user experience</p>
-                <span className="tags">HTML5 CSS3 JavaScript Responsive Design</span>
-              </div>
-              
-              <div className="project">
-                <p>- Created and integrated RESTful APIs for seamless data management and third-party integrations</p>
-                <span className="tags">Node.js Express MongoDB API Development</span>
-              </div>
-              
-              <div className="skillscards">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>MongoDB</span>
-                <span>TypeScript</span>
-                <span>Express</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="card-2">
-            <div className="experience-content">
-              <div className="job-header">
-                <h3>Full Stack Developer</h3>
-                <div className="date">2022 - 2024</div>
-              </div>
-              <div className="company">
-                Web Development Agency
-                <a className="button" href="https://github.com/Thalesmar">
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-              </div>
-            
-              <p>
-                Led the development of multiple full-stack web applications, focusing on scalable architecture and modern development practices. Implemented CI/CD pipelines and optimized application performance for enterprise clients.
-              </p>
-              
-              <div className="project">
-                <p>- Developed enterprise-level applications with microservices architecture and containerization</p>
-                <span className="tags">React Node.js PostgreSQL Docker AWS</span>
-              </div>
-            
-              <div className="project">
-                <p>- Implemented automated testing strategies and CI/CD pipelines for improved development workflow</p>
-                <span className="tags">Jest Cypress GitHub Actions CI/CD</span>
-              </div>
-            
-              <div className="project">
-                <p>- Optimized database performance and implemented caching strategies for better scalability</p>
-                <span className="tags">PostgreSQL Redis Performance Optimization</span>
-              </div>
-              
-              <div className="skillscards">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>PostgreSQL</span>
-                <span>Docker</span>
-                <span>AWS</span>
-              </div>
-            </div>
+      <div className="timeline-item">
+        <div className="timeline-dot"></div>
+        <div className="timeline-content">
+          <div className="timeline-date">2023 - 2024</div>
+          <h3>Programming Foundations</h3>
+          <div className="timeline-company">C Language & Algorithms</div>
+          <p>
+            Learned programming fundamentals, memory management, and algorithmic thinking
+            using C. Developed problem-solving skills and a solid base in software logic.
+          </p>
+          <div className="timeline-tech">
+            <span>C</span>
+            <span>Algorithms</span>
+            <span>Problem Solving</span>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div className="timeline-item">
+        <div className="timeline-dot"></div>
+        <div className="timeline-content">
+          <div className="timeline-date">2025 (Upcoming)</div>
+          <h3>Full-Stack Developer Path</h3>
+          <div className="timeline-company">Self-Taught Roadmap</div>
+          <p>
+            Starting backend development, focusing on Node.js, Express, databases, and deployment.
+            Goal: build full-stack applications and strengthen DevSecOps fundamentals.
+          </p>
+          <div className="timeline-tech">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>APIs</span>
+            <span>Linux</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <section className="skills-section section" id="skills-section">
         <h2 className="section-title">.skills<span className="h2">()</span></h2>
@@ -480,7 +400,7 @@ function App() {
 
       <section id="contact" className="contact section">
         <h2 className="section-title">.contact<span className="h2">()</span></h2>
-        <p className="contact-text">I am always on the lookout for new challenges and opportunities to learn and grow. If you have a project or idea that you think I could help with, I would love to hear from you. Please feel free to get in touch via the contact button below or through any of the social media links.</p>
+        <p className="contact-text">I am always eager to take on new challenges and opportunities to learn and grow. If you have a project or idea where I could contribute, I would love to hear from you. Feel free to reach out via the contact button below or through any of my social media links.</p>
         <div className="hello-button">
           <a href="mailto:harrouteyassine573@gmail.com" className="hello-button-style">Say hello!</a>
         </div>
@@ -495,7 +415,7 @@ function App() {
             }} />
             <span style={{display: 'none'}} className='name-style'>Thales</span>
           </div>
-          
+
           <div className="credit-pos">
             <div className="credit-wrapper">
               <span className="CREDIT">Credit</span>
@@ -520,7 +440,7 @@ function App() {
             </a>
           </div>
         </div>
-        
+
         <div className="privacy">
           <span>2020-2024</span>
           <span className="line-middle">|</span>
