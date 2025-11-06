@@ -6,66 +6,51 @@ function App() {
   const [headerHidden, setHeaderHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
-  useEffect(() => {
-    // Add Font Awesome CSS link to head
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-    link.crossOrigin = 'anonymous';
-    document.head.appendChild(link);
-
-    // Add favicon - use relative path for GitHub Pages
-    const favicon = document.createElement('link');
-    favicon.rel = 'icon';
-    favicon.type = 'image/png';
-    favicon.href = './logo/favicon1.png';
-    document.head.appendChild(favicon);
-
-    // Cleanup function to remove elements if component unmounts
-    return () => {
-      if (document.head.contains(link)) {
-        document.head.removeChild(link);
-      }
-      if (document.head.contains(favicon)) {
-        document.head.removeChild(favicon);
-      }
-    };
-  }, []);
+  // Font Awesome and favicon are now loaded in HTML head for better performance
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      // Header hide/show logic
-      if (scrollTop > lastScrollTop && scrollTop > 100) {
-        setHeaderHidden(true);
-      } else {
-        setHeaderHidden(false);
-      }
-      setLastScrollTop(scrollTop);
+          // Header hide/show logic
+          if (scrollTop > lastScrollTop && scrollTop > 100) {
+            setHeaderHidden(true);
+          } else {
+            setHeaderHidden(false);
+          }
+          setLastScrollTop(scrollTop);
 
-      // Active section highlighting
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.menu a');
-      const scrollPos = window.scrollY + 100;
+          // Active section highlighting
+          const sections = document.querySelectorAll('section[id]');
+          const navLinks = document.querySelectorAll('.menu a');
+          const scrollPos = window.scrollY + 100;
 
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
 
-        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-          navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${sectionId}`) {
-              link.classList.add('active');
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+              navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                  link.classList.add('active');
+                }
+              });
             }
           });
-        }
-      });
+          
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
@@ -222,12 +207,20 @@ function App() {
 
   return (
     <div className="App">
-      <header className={`header ${headerHidden ? 'hidden' : ''}`}>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <header className={`header ${headerHidden ? 'hidden' : ''}`} role="banner">
         <div className="logo">
-          <img src="./logo/Thlaes.png" alt="Thales Logo" onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.nextSibling.style.display = 'block';
-          }} />
+          <img 
+            src="./logo/Thlaes.png" 
+            alt="Yassine Harroute Logo" 
+            loading="eager"
+            width="140"
+            height="auto"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'block';
+            }} 
+          />
           <span style={{display: 'none'}} className='name-style'>Thales</span>
         </div>
         <nav className={`menu-container ${menuActive ? 'active' : ''}`}>
@@ -246,9 +239,9 @@ function App() {
         </button>
       </header>
 
-      <div className="intro-section">
+      <main className="intro-section" role="main">
         <div className="intro-header">
-          <div className="line1"></div>
+          <div className="line1" aria-hidden="true"></div>
           <h1 className="greeting">Hi</h1>
         </div>
         <p className="name-intro">I'm <span className="name-highlight">Yassine Harroute</span></p>
@@ -259,7 +252,7 @@ function App() {
             <span className="hover-underline"> responsive interfaces </span> and aim to grow into
             <span className="hover-underline"> full-stack and DevSecOps development </span>.
         </p>
-      </div>
+      </main>
 
       <div className="scroll-indicator">
         <div className="mouse"></div>
@@ -409,10 +402,17 @@ function App() {
       <footer className="footer">
         <div className="footer-content">
           <div className="logo-footer" onClick={scrollToTop}>
-            <img src="./logo/Thlaes.png" alt="Thales Logo" onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'block';
-            }} />
+            <img 
+              src="./logo/Thlaes.png" 
+              alt="Yassine Harroute Logo" 
+              loading="lazy"
+              width="160"
+              height="auto"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'block';
+              }} 
+            />
             <span style={{display: 'none'}} className='name-style'>Thales</span>
           </div>
 
