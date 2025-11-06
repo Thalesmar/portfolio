@@ -893,7 +893,7 @@ body {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 1011px) {
   .header {
     padding: 1rem 2rem;
   }

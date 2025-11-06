@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     let ticking = false;
-    
+
     const handleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
@@ -43,7 +43,7 @@ function App() {
               });
             }
           });
-          
+
           ticking = false;
         });
         ticking = true;
@@ -192,7 +192,9 @@ function App() {
       items: [
         { name: "React.js", level: "90%" },
         { name: "Next.js", level: "80%" },
-        { name: "Tailwind CSS", level: "85%" }
+        { name: "Tailwind CSS", level: "85%" },
+
+        { name: "npm/yarn", level: "90%" }
       ]
     },
     // {
@@ -210,16 +212,16 @@ function App() {
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <header className={`header ${headerHidden ? 'hidden' : ''}`} role="banner">
         <div className="logo">
-          <img 
-            src="/images/logo.png" 
-            alt="Yassine Harroute - Software Engineer Portfolio Logo" 
+          <img
+            src="/images/logo.png"
+            alt="Yassine Harroute - Software Engineer Portfolio Logo"
             loading="eager"
             width="140"
             height="50"
             onError={(e) => {
               e.target.style.display = 'none';
               e.target.nextSibling.style.display = 'block';
-            }} 
+            }}
           />
           <span style={{display: 'none'}} className='name-style'>Thales</span>
         </div>
@@ -342,6 +344,7 @@ function App() {
             <span>C</span>
             <span>Algorithms</span>
             <span>Problem Solving</span>
+            <span>npm & yarn</span>
           </div>
         </div>
       </div>
@@ -362,6 +365,7 @@ function App() {
             <span>MongoDB</span>
             <span>APIs</span>
             <span>Linux</span>
+            <span>AWS</span>
           </div>
         </div>
       </div>
@@ -402,16 +406,16 @@ function App() {
       <footer className="footer">
         <div className="footer-content">
           <div className="logo-footer" onClick={scrollToTop}>
-            <img 
-              src="/images/logo.png" 
-              alt="Yassine Harroute Portfolio - Back to Top" 
+            <img
+              src="/images/logo.png"
+              alt="Yassine Harroute Portfolio - Back to Top"
               loading="lazy"
               width="160"
               height="60"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.nextSibling.style.display = 'block';
-              }} 
+              }}
             />
             <span style={{display: 'none'}} className='name-style'>Thales</span>
           </div>
