@@ -36,11 +36,10 @@ A modern, responsive portfolio website showcasing my work as a Software Engineer
 ## 📱 Screenshots
 
 ### Desktop View
-![Desktop Portfolio](/public/desktopScreen/image.png)
-
+![Desktop Portfolio](/public/images/desktop-hero.png)
 
 ### Mobile View
-![Mobile Portfolio](/public/mobileDesktop/image.png)
+![Mobile Portfolio](/public/images/mobile-hero.png)
 
 ## 🏗️ Project Structure
 

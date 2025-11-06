@@ -211,7 +211,7 @@ function App() {
       <header className={`header ${headerHidden ? 'hidden' : ''}`} role="banner">
         <div className="logo">
           <img 
-            src="./logo/Thlaes.png" 
+            src="/images/logo.png" 
             alt="Yassine Harroute Logo" 
             loading="eager"
             width="140"
@@ -403,7 +403,7 @@ function App() {
         <div className="footer-content">
           <div className="logo-footer" onClick={scrollToTop}>
             <img 
-              src="./logo/Thlaes.png" 
+              src="/images/logo.png" 
               alt="Yassine Harroute Logo" 
               loading="lazy"
               width="160"
