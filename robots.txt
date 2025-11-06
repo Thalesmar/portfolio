@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
 # Sitemap
 Sitemap: https://thales-2y8.pages.dev/sitemap.xml
@@ -8,3 +9,10 @@ Sitemap: https://thales-2y8.pages.dev/sitemap.xml
 Disallow: /assets/
 Disallow: /*.js$
 Disallow: /*.css$
+Disallow: /_headers
+Disallow: /_redirects
+Disallow: /google*.html
+
+# Allow important files
+Allow: /images/
+Allow: /favicon.ico
