@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://thales-2y8.pages.dev/sitemap.xml
+
+# Disallow crawling of assets that don't need indexing
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$
