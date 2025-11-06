@@ -212,10 +212,10 @@ function App() {
         <div className="logo">
           <img 
             src="/images/logo.png" 
-            alt="Yassine Harroute Logo" 
+            alt="Yassine Harroute - Software Engineer Portfolio Logo" 
             loading="eager"
             width="140"
-            height="auto"
+            height="50"
             onError={(e) => {
               e.target.style.display = 'none';
               e.target.nextSibling.style.display = 'block';
@@ -404,10 +404,10 @@ function App() {
           <div className="logo-footer" onClick={scrollToTop}>
             <img 
               src="/images/logo.png" 
-              alt="Yassine Harroute Logo" 
+              alt="Yassine Harroute Portfolio - Back to Top" 
               loading="lazy"
               width="160"
-              height="auto"
+              height="60"
               onError={(e) => {
                 e.target.style.display = 'none';
                 e.target.nextSibling.style.display = 'block';
