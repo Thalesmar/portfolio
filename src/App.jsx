@@ -304,7 +304,7 @@ function App() {
       </section>
 
    <section id="resume" className="resume-section section">
-  <h1 className="main-resume-title">.resume<span className="title-bracket">("my journey")</span></h1>
+  <h2 className="main-resume-title">.resume<span className="title-bracket">("my journey")</span></h2>
 
   <div className="timeline-container">
     <div className="timeline">
