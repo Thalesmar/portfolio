@@ -244,9 +244,9 @@ function App() {
       <main id="main-content" className="intro-section" role="main">
         <div className="intro-header">
           <div className="line1" aria-hidden="true"></div>
-          <h1 className="greeting">Hi</h1>
+          <p className="greeting">Hi</p>
         </div>
-        <p className="name-intro">I'm <span className="name-highlight">Yassine Harroute</span></p>
+        <h1 className="name-intro">I'm <span className="name-highlight">Yassine Harroute</span></h1>
         <p className="intro">
             I'm an aspiring <span className="hover-underline"> Web Developer</span> focused on building
             <span className="hover-underline"> real-world projects </span> and mastering
